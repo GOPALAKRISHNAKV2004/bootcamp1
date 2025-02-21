@@ -1,0 +1,2 @@
+#portfolio
+A portfolio page is a personal webpage that highlights skills, projects, and achievements. It includes sections like an about me, projects, and contact information, using HTML tags such as <h> for headings, <p> for descriptions, <img> for profile and project images, and lists (<ul>, <ol>) for skills or experiences. Bootstrap CSS is used to enhance the design, ensuring a responsive and professional layout that works well on all devices.
