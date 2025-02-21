@@ -1,0 +1,2 @@
+#product
+A product showcase page is a webpage that displays details about various products in an attractive and organized manner. It uses HTML tags like <h> for product titles, <p> for descriptions, <img> for product images, and lists (<ul>, <li>) for features or specifications. Bootstrap CSS is used to create a responsive and visually appealing layout, ensuring a seamless experience across different screen sizes.
