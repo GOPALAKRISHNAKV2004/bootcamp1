@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+       body{
+        text-align: center;
+       }
+
+         
+      
+     
+    </style>
+</head>
+<body>
+<div class=".container bg-dark text-white  center rounded ">
+    <h2>Temperature Converter</h2>
+ <nav class=".container text-dark bg-white m-10 p-3">
+       <label for="celsius">Celsius: </label>
+    <input style="width: 200px;"type="number" id="celsius" placeholder="Enter Celsius"><br>
+
+    <label for="fahrenheit">Fahrenheit:</label>
+    <input  style="margin: 1rem; width:200px;margin-right: 5pxs;" type="number" id="fahrenheit" placeholder="Enter Fahrenheit">
+ </nav>
+</div>
+    
+
+    <script>
+        // Get input elements
+        const celsiusInput = document.getElementById("celsius");
+        const fahrenheitInput = document.getElementById("fahrenheit");
+
+        // Convert Celsius to Fahrenheit
+        celsiusInput.addEventListener("input", () => {
+            let celsius = parseFloat(celsiusInput.value);
+            if (!isNaN(celsius)) {
+                let fahrenheit = (celsius * 9/5) + 32;
+                fahrenheitInput.value = fahrenheit.toFixed(2); // Show result with 2 decimal places
+            } else {
+                fahrenheitInput.value = ""; // Clear field if input is invalid
+            }
+        });
+
+        // Convert Fahrenheit to Celsius
+        fahrenheitInput.addEventListener("input", () => {
+            let fahrenheit = parseFloat(fahrenheitInput.value);
+            if (!isNaN(fahrenheit)) {
+                let celsius = (fahrenheit - 32) * 5/9;
+                celsiusInput.value = celsius.toFixed(2);
+            } else {
+                celsiusInput.value = ""; // Clear field if input is invalid
+            }
+        });
+    </script>
+
+</body>
+</html>

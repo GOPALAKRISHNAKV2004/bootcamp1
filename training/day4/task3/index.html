@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+       body{
+        text-align: center;
+        background-color: aliceblue;
+       }
+    </style>
+</head>
+<body>
+   <div class=".container text-white bg-dark">
+    <h2>Simple Image Slider</h2>
+    </div>
+    <div class="slider-container">
+        <img id="slider" src="th (1).jpegs" alt="Image Slider">
+    </div>
+
+    <div class="buttons p-3 m-2 text">
+        <button onclick="prevImage()">Previous</button>
+        <button onclick="nextImage()">Next</button>
+    </div>
+
+    <script>
+        // Image list (URLs or local file paths)
+        const images = [
+            "nike.jpeg",
+            "zoom.jpeg",
+            "th (1).jpeg",
+            "th.jpeg"
+        ];
+
+        let currentIndex = 0; // Track current image index
+        const slider = document.getElementById("slider");
+
+        // Function to update the image
+        function updateImage() {
+            slider.src = images[currentIndex];
+        }
+
+        // Function for Next button
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length; // Loop to the first image
+            updateImage();
+        }
+
+        // Function for Previous button
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop to the last image
+            updateImage();
+        }
+
+        // Initialize the slider with the first image
+        updateImage();
+    </script>
+
+</body>
+</html>
