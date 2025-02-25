@@ -1,0 +1,19 @@
+{
+  "name": "task8",
+  "version": "1.0.0",
+  "main": "task8.js",
+  "scripts": {
+    "start": "nodemon task8",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
